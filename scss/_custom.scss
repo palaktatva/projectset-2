@@ -4,7 +4,7 @@
     padding: 20px 0;
     justify-content: space-between;
     align-items: center;
-
+    
     .nav-listing{
         display: flex;
         margin: 0 -18px;
@@ -39,9 +39,84 @@
             .slider-block{
                 flex: 0 0 302px;
                 max-width: 302px;
-                padding: 16px;
+                padding: 16px 0;
                 border: 1px solid $grey;
                 margin-top: 53px;
+                border-radius: 4px;
+
+                .slider-nav{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    padding: 0 16px;
+                    align-items: center;
+
+                    .slider-next-prev{
+                        .next-arrow{
+                            transform: rotate(180deg);
+                        }
+                        svg{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .swiper-wrapper{
+                    .slider-item{
+                        &.swiper-slide {
+                            padding: 0 16px;
+                        }
+                        .slider-item-inner{
+                            .title-block{
+                                margin-bottom: 20px;
+                            }
+                            .content-block{
+                                p{
+                                    color: $text-color-2;
+                                    line-height: 1.4;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .button-wrapper{
+                                margin-bottom: 20px;
+                                .primary-btn{
+                                    width: 100%;
+
+                                    &:not(:last-child){
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                            }
+                            .info-block-wrapper{
+                                margin-bottom: -20px;
+                                .info-block{
+                                    padding-bottom: 20px;
+
+                                    span{
+                                        text-transform:  uppercase;
+                                        font-size: 12px;
+                                        line-height: 1.666;
+                                        margin-bottom: 5px;
+                                        color: $text-color;
+                                        display: block;
+                                    }
+                                    p{
+                                        color: $text-color-2;
+                                    }
+                                    .button-group{
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        margin: 0 -4px -8px;
+                                        .btn{
+                                            padding: 0 4px 8px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                
             }
         }
 
@@ -49,16 +124,25 @@
     .calender-menu{
         display: flex;
         margin: 0 -8px;
-        div{
+        .menu-item{
             padding: 0 8px;
+
+        &.month{
+          flex: 0 0 178px;
+          max-width: 178px;
+        }
+        &.custom-dropdown{
+            flex: 0 0 14%;
+            max-width: 14%;
+        }
         &.event-notes{
-            padding: 0px 4px;
-            border: 1px solid $grey;
-            display: inline-flex;
-            align-items: center;
-            height: 36px;
-            border-radius: 24px;
-        
+            .event-notes-inner{
+                border: 1px solid $grey;
+                display: inline-flex;
+                align-items: center;
+                border-radius: 24px;
+                padding: 7px 4px;
+            }        
             span{
                 padding: 0 8px;
                 display: inline-flex;

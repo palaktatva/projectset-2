@@ -1,3 +1,10 @@
+
+.purple-btn{
+    background-color: $purple-color;
+    height: 12px;
+    width: 20px;
+    border-radius: 100px;
+ }
 .primary-btn{
 color: $primary-color;
 font-weight: 600;
@@ -7,32 +14,61 @@ border: 1px solid $primary-color;
 display: inline-block;
 text-align: center;
 line-height: 2.8;
+transition: 0.5s all;
+
+&:hover{
+    background-color: $primary-color;
+    color: $white;
+}
+}
+.secondary-btn{
+    line-height: 1.7;
+    padding: 0 8px;
+    display: inline-block;
+    color: $blue-color;
+    background-color: $light-blue;
+    border-radius: 4px;
+
 }
 
-.fc{
-    .fc-theme-standard {
-        td{
-            color: $black-1;
-            font-weight: 400;
-        }
+.fc-theme-standard {
+    td{
+        color: $black-1;
+        font-weight: 400;
     }
+}
+
+.fc{    
     
     .fc-col-header-cell-cushion {
         padding: 12px;
     }
     .fc-daygrid-day-top{
         flex-direction: row;
+        padding: 9px 12px;
         .fc-daygrid-day-number {
-            padding: 12px;
+            padding: 3px 6px;
+            border-radius: 4px;
         }
         
-}
-.fc-day-other{
+    }
+    .fc-day-other{
     .fc-daygrid-day-top{
         color: $text-color-1;
         opacity: 1;
     }
-}
+    }
+    .fc-daygrid-day{
+        &.fc-day-today{
+            background-color: $white;
+            .fc-daygrid-day-top{
+                .fc-daygrid-day-number{
+                    background-color:$light-blue;
+                }
+            }
+        }
+    }
+
 
 .fc-toolbar{
     &.fc-header-toolbar{
@@ -91,13 +127,11 @@ line-height: 2.8;
         }
     }
 }
-
    
 .custom-dropdown{
     .select2{
         &.select2-container{
             width: 100% !important; 
-            max-width: 130px; 
     
             .select2-selection--single{
                 height: 36px;
@@ -106,6 +140,7 @@ line-height: 2.8;
                     font-size: 14px;
                     font-weight: 400;
                     padding-left: 12px;
+                    padding-right: 36px;
                 }
             }
          }
@@ -126,12 +161,35 @@ line-height: 2.8;
                     height: 100%;
                     width: 8px;
                     top: 0px;
-                    right: 7px;
+                    right: 10px;
     
                     b{
                         display: none;
                     }
                 }
+                .select2-selection__placeholder{
+                    color: $text-color-2;
+                }
+
+            }
+        }
+    }
+}
+.slider-block{
+    .swiper-pagination{
+        display: none;
+    }
+    .next-arrow{
+        &.swiper-button-disabled{
+            path{
+                fill: #B9B8B8;
+            }
+        }
+    }
+    .prev-arrow{
+        &.swiper-button-disabled{
+            path{
+                fill: #B9B8B8;
             }
         }
     }

@@ -19,13 +19,13 @@
             /></a>
           </div>
           <ul class="nav-listing">
-            <li><a href="">Product</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="" title="product">Product</a></li>
+            <li><a href="" title="Pricing">Pricing</a></li>
+            <li><a href="" title="Contact Us">Contact Us</a></li>
           </ul>
           <ul class="btn-listing">
-            <li><a href="" class="primary-btn">Log In</a></li>
-            <li><a href="" class="primary-btn">Sign Up</a></li>
+            <li><a href="" class="primary-btn" title="Log In">Log In</a></li>
+            <li><a href="" class="primary-btn" title="Sign Up">Sign Up</a></li>
           </ul>
         </div>
       </div>
@@ -36,35 +36,39 @@
           <div class="event-calendar-wrapper">
             <div class="event-calendar">
               <div class="calender-menu">
-                <div class="month">
-                  <select class="dropdown" name="state">
-                    <option value="2023-12-01">December 2023</option>
-                    <option value="2023-01-01">January 2023</option>
-                    <option value="2023-02-01">February 2023</option>
-                    <option value="2023-03-01">March 2023</option>
-                    <option value="2023-04-01">April 2023</option>
-                    <option value="2023-05-01">May 2023</option>
-                    <option value="2023-06-01">June 2023</option>
-                    <option value="2023-07-01">July 2023</option>
-                    <option value="2023-08-01">August 2023</option>
-                    <option value="2023-09-01">September 2023</option>
-                    <option value="2023-10-01">October 2023</option>
-                    <option value="2023-11-01">November 2023</option>
+                <div class="month menu-item">
+                  <select class="dropdown" id="month-dropdown" name="state">
+                    <option value="1">December 2023</option>
+                    <option value="2">January 2023</option>
+                    <option value="3">February 2023</option>
+                    <option value="4">March 2023</option>
+                    <option value="5">April 2023</option>
+                    <option value="6">May 2023</option>
+                    <option value="7">June 2023</option>
+                    <option value="8">July 2023</option>
+                    <option value="9">August 2023</option>
+                    <option value="10">September 2023</option>
+                    <option value="11">October 2023</option>
+                    <option value="12">November 2023</option>
                   </select>
                 </div>
-                <div class="event-notes">
-                  <span><img src="./images/calendar.svg" alt=""></span>
-                  <span><img src="./images/list.svg" alt=""></span>
-                </div>
-                <div class="event custom-dropdown ">
-                  <select class="dropdown" name="state">
+                <div class="event-notes menu-item">
+                  <div class="event-notes-inner">
+                    <span><img src="./images/calendar.svg" alt="calendar"></span>
+                    <span><img src="./images/list.svg" alt="list"></span>
+                  </div>
+                </div>                
+                <div class="custom-dropdown menu-item">
+                  <select class="dropdown" name="state" data-placeholder="Event Type">
+                    <option value="" disabled selected>Event Type</option>
                     <option value="2023-12-01">Hackathon</option>
                     <option value="2023-01-01">Projects</option>
                     <option value="2023-02-01">Masterclasses</option>
                   </select>
                 </div>
-                <div class="Geography custom-dropdown">
-                  <select class="dropdown" name="state">
+                <div class="custom-dropdown menu-item">
+                  <select class="dropdown" name="state"data-placeholder="Geography">
+                    <option value="" disabled selected>Geography</option>
                     <option value="2023-12-01">United States</option>
                     <option value="2023-01-01">United Kingdom</option>
                     <option value="2023-02-01">Afghanistan</option>
@@ -75,24 +79,296 @@
               </div>              
               <div id="calendar"></div>
             </div>
-            <div class="slider-block swiper mySwiper">
-             
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
+            <div class="slider-block swiper">
+              <div class="slider-nav">
+                <div class="purple-btn"></div>
+                <div class="slider-next-prev">
+                  <svg class="prev-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.325 15L12.5 13.825L8.68333 10L12.5 6.175L11.325 5L6.325 10L11.325 15Z" fill="#2F64FF"/>
+                  </svg>
+                  <svg class="next-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.325 15L12.5 13.825L8.68333 10L12.5 6.175L11.325 5L6.325 10L11.325 15Z" fill="#2F64FF"/>
+                  </svg>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-wrapper">
+                <div class="slider-item swiper-slide">
+                    <div class="slider-item-inner">
+                      <div class="title-block">
+                        <h3>Anveshan 2023: Basic Science</h3>
+                        <p>Thu, 16 December 2023</p>
+                      </div>   
+                      <div class="content-block">
+                        <p>We invite you to submit your groundbreaking research ideas in the field of Basic Science. Your innovative idea may encompass the theory or practice of Mathematics, Physics, Chemistry and Biology, and other related areas. </p>
+                      </div>
+                      <div class="button-wrapper">
+                        <a href="" class="primary-btn" title="Join hackathon">Join Hackathon</a>
+                        <a href="" class="primary-btn" title="Learn more">Learn more</a>
+                      </div> 
+                      <div class="info-block-wrapper">
+                        <div class="info-block">
+                          <span>EVENT TYPE</span>
+                          <p>Competition / Hackathon</p>
+                        </div> 
+                        <div class="info-block">
+                          <span>LOCATION</span>
+                          <p>Virtual</p>
+                        </div> 
+                        <div class="info-block">
+                          <span>REGISTRATION STARTS</span>
+                          <p>Jan 22, 2024, 5:30PM BST</p>
+                        </div> 
+                        <div class="info-block">
+                          <span>PROJECT STARTS</span>
+                          <p>Jan 30, 2024, 5:30PM BST</p>
+                        </div> 
+                        <div class="info-block">
+                          <span>TAGs</span>
+                          <div class="button-group">
+                            <div class="btn">
+                              <a href="" class="secondary-btn">Coding</a>
+                            </div>
+                            <div class="btn">
+                              <a href="" class="secondary-btn">global</a>
+                            </div>
+                            <div class="btn">
+                              <a href="" class="secondary-btn">hardware</a>
+                            </div>
+                            <div class="btn">
+                              <a href="" class="secondary-btn">university student</a>
+                            </div>
+                            <div class="btn">
+                              <a href="" class="secondary-btn">engineering</a>
+                            </div>                       
+                          </div>
+                        </div> 
+                      </div>
+                                     
+                    </div>
+                </div>
+                <div class="slider-item swiper-slide">
+                  <div class="slider-item-inner">
+                    <div class="title-block">
+                      <h3>Anveshan 2023: Basic Science</h3>
+                      <p>Thu, 16 December 2023</p>
+                    </div>   
+                    <div class="content-block">
+                      <p>We invite you to submit your groundbreaking research ideas in the field of Basic Science. Your innovative idea may encompass the theory or practice of Mathematics, Physics, Chemistry and Biology, and other related areas. </p>
+                    </div>
+                    <div class="button-wrapper">
+                      <a href="" class="primary-btn" title="Join hackathon">Join Hackathon</a>
+                      <a href="" class="primary-btn" title="Learn more">Learn more</a>
+                    </div> 
+                    <div class="info-block-wrapper">
+                      <div class="info-block">
+                        <span>EVENT TYPE</span>
+                        <p>Competition / Hackathon</p>
+                      </div> 
+                      <div class="info-block">
+                        <span>LOCATION</span>
+                        <p>Virtual</p>
+                      </div> 
+                      <div class="info-block">
+                        <span>REGISTRATION STARTS</span>
+                        <p>Jan 22, 2024, 5:30PM BST</p>
+                      </div> 
+                      <div class="info-block">
+                        <span>PROJECT STARTS</span>
+                        <p>Jan 30, 2024, 5:30PM BST</p>
+                      </div> 
+                      <div class="info-block">
+                        <span>TAGs</span>
+                        <div class="button-group">
+                          <div class="btn">
+                            <a href="" class="secondary-btn">Coding</a>
+                          </div>
+                          <div class="btn">
+                            <a href="" class="secondary-btn">global</a>
+                          </div>
+                          <div class="btn">
+                            <a href="" class="secondary-btn">hardware</a>
+                          </div>
+                          <div class="btn">
+                            <a href="" class="secondary-btn">university student</a>
+                          </div>
+                          <div class="btn">
+                            <a href="" class="secondary-btn">engineering</a>
+                          </div>                       
+                        </div>
+                      </div> 
+                    </div>
+                                   
+                  </div>
+              </div>
+              <div class="slider-item swiper-slide">
+                <div class="slider-item-inner">
+                  <div class="title-block">
+                    <h3>Anveshan 2023: Basic Science</h3>
+                    <p>Thu, 16 December 2023</p>
+                  </div>   
+                  <div class="content-block">
+                    <p>We invite you to submit your groundbreaking research ideas in the field of Basic Science. Your innovative idea may encompass the theory or practice of Mathematics, Physics, Chemistry and Biology, and other related areas. </p>
+                  </div>
+                  <div class="button-wrapper">
+                    <a href="" class="primary-btn" title="Join hackathon">Join Hackathon</a>
+                    <a href="" class="primary-btn" title="Learn more">Learn more</a>
+                  </div> 
+                  <div class="info-block-wrapper">
+                    <div class="info-block">
+                      <span>EVENT TYPE</span>
+                      <p>Competition / Hackathon</p>
+                    </div> 
+                    <div class="info-block">
+                      <span>LOCATION</span>
+                      <p>Virtual</p>
+                    </div> 
+                    <div class="info-block">
+                      <span>REGISTRATION STARTS</span>
+                      <p>Jan 22, 2024, 5:30PM BST</p>
+                    </div> 
+                    <div class="info-block">
+                      <span>PROJECT STARTS</span>
+                      <p>Jan 30, 2024, 5:30PM BST</p>
+                    </div> 
+                    <div class="info-block">
+                      <span>TAGs</span>
+                      <div class="button-group">
+                        <div class="btn">
+                          <a href="" class="secondary-btn">Coding</a>
+                        </div>
+                        <div class="btn">
+                          <a href="" class="secondary-btn">global</a>
+                        </div>
+                        <div class="btn">
+                          <a href="" class="secondary-btn">hardware</a>
+                        </div>
+                        <div class="btn">
+                          <a href="" class="secondary-btn">university student</a>
+                        </div>
+                        <div class="btn">
+                          <a href="" class="secondary-btn">engineering</a>
+                        </div>                       
+                      </div>
+                    </div> 
+                  </div>
+                                 
+                </div>
             </div>
+            <div class="slider-item swiper-slide">
+              <div class="slider-item-inner">
+                <div class="title-block">
+                  <h3>Anveshan 2023: Basic Science</h3>
+                  <p>Thu, 16 December 2023</p>
+                </div>   
+                <div class="content-block">
+                  <p>We invite you to submit your groundbreaking research ideas in the field of Basic Science. Your innovative idea may encompass the theory or practice of Mathematics, Physics, Chemistry and Biology, and other related areas. </p>
+                </div>
+                <div class="button-wrapper">
+                  <a href="" class="primary-btn" title="Join hackathon">Join Hackathon</a>
+                  <a href="" class="primary-btn" title="Learn more">Learn more</a>
+                </div> 
+                <div class="info-block-wrapper">
+                  <div class="info-block">
+                    <span>EVENT TYPE</span>
+                    <p>Competition / Hackathon</p>
+                  </div> 
+                  <div class="info-block">
+                    <span>LOCATION</span>
+                    <p>Virtual</p>
+                  </div> 
+                  <div class="info-block">
+                    <span>REGISTRATION STARTS</span>
+                    <p>Jan 22, 2024, 5:30PM BST</p>
+                  </div> 
+                  <div class="info-block">
+                    <span>PROJECT STARTS</span>
+                    <p>Jan 30, 2024, 5:30PM BST</p>
+                  </div> 
+                  <div class="info-block">
+                    <span>TAGs</span>
+                    <div class="button-group">
+                      <div class="btn">
+                        <a href="" class="secondary-btn">Coding</a>
+                      </div>
+                      <div class="btn">
+                        <a href="" class="secondary-btn">global</a>
+                      </div>
+                      <div class="btn">
+                        <a href="" class="secondary-btn">hardware</a>
+                      </div>
+                      <div class="btn">
+                        <a href="" class="secondary-btn">university student</a>
+                      </div>
+                      <div class="btn">
+                        <a href="" class="secondary-btn">engineering</a>
+                      </div>                       
+                    </div>
+                  </div> 
+                </div>
+                               
+              </div>
+          </div>
+          <div class="slider-item swiper-slide">
+            <div class="slider-item-inner">
+              <div class="title-block">
+                <h3>Anveshan 2023: Basic Science</h3>
+                <p>Thu, 16 December 2023</p>
+              </div>   
+              <div class="content-block">
+                <p>We invite you to submit your groundbreaking research ideas in the field of Basic Science. Your innovative idea may encompass the theory or practice of Mathematics, Physics, Chemistry and Biology, and other related areas. </p>
+              </div>
+              <div class="button-wrapper">
+                <a href="" class="primary-btn" title="Join hackathon">Join Hackathon</a>
+                <a href="" class="primary-btn" title="Learn more">Learn more</a>
+              </div> 
+              <div class="info-block-wrapper">
+                <div class="info-block">
+                  <span>EVENT TYPE</span>
+                  <p>Competition / Hackathon</p>
+                </div> 
+                <div class="info-block">
+                  <span>LOCATION</span>
+                  <p>Virtual</p>
+                </div> 
+                <div class="info-block">
+                  <span>REGISTRATION STARTS</span>
+                  <p>Jan 22, 2024, 5:30PM BST</p>
+                </div> 
+                <div class="info-block">
+                  <span>PROJECT STARTS</span>
+                  <p>Jan 30, 2024, 5:30PM BST</p>
+                </div> 
+                <div class="info-block">
+                  <span>TAGs</span>
+                  <div class="button-group">
+                    <div class="btn">
+                      <a href="" class="secondary-btn">Coding</a>
+                    </div>
+                    <div class="btn">
+                      <a href="" class="secondary-btn">global</a>
+                    </div>
+                    <div class="btn">
+                      <a href="" class="secondary-btn">hardware</a>
+                    </div>
+                    <div class="btn">
+                      <a href="" class="secondary-btn">university student</a>
+                    </div>
+                    <div class="btn">
+                      <a href="" class="secondary-btn">engineering</a>
+                    </div>                       
+                  </div>
+                </div> 
+              </div>
+                             
+            </div>
+        </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            </div>    
             </div>
           </div>
         </div>
+          
       </div>
     </main>
     <script src="./js/jquery-3.7.1.min.js"></script>
