@@ -68,13 +68,14 @@ transition: 0.5s all;
             }
         }
     }
-
-
-.fc-toolbar{
+    .fc-toolbar{
     &.fc-header-toolbar{
         margin-bottom: 17px;
     }
-}
+    }
+    .fc-daygrid-event-harness{
+        margin-bottom: 2px;
+    }
 }
 .fc-theme-standard{
     th{
@@ -195,3 +196,86 @@ transition: 0.5s all;
     }
 }
   
+
+.fc-direction-ltr{
+    .fc-daygrid-event{
+        border: none;
+        border-radius: 0;
+        &.fc-event-end{
+            margin-right: 0;           
+        }
+        &.fc-event-start{
+            margin-left: 0;
+        }
+        &.orange{
+            border-left:2px solid #FF6128 !important;
+        }
+        &.purple{
+            border-left:2px solid #B656FF !important; 
+        }
+        &.blue{
+            border-left: 2px solid #0385FE !important;
+        }
+        &.yellow{
+            border-left: 2px solid #FFB861 !important;
+        }
+    }
+    .fc-daygrid-block-event{
+        .fc-event-title{
+            padding: 2px 8px;
+            text-overflow: ellipsis;
+            line-height: 1.6;
+            font-size: 12px;
+        } 
+    }
+    .fc-h-event{
+        .fc-event-main {
+            color: $black-1;
+        }
+    } 
+} 
+
+.fc{
+    .fc-daygrid-day-bottom{
+        margin: 0;
+        .fc-daygrid-more-link{
+            background-color: #7472721a;
+            border-left: 2px solid #747272;
+            padding: 0px 26px 0 8px;
+            line-height: 1.6;
+            border-radius: 0;
+            position: relative;
+
+            &::after{
+                content: " ";
+                background-image: url(../images/vector.svg);
+                position: absolute;
+                background-size: 7px 7px;
+                cursor: pointer;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.5s;
+                height: 100%;
+                width: 8px;
+                top: 0px;
+                right: 12px;
+            }
+        }
+    }
+   
+}
+
+.event-description{
+    display: none;
+}
+
+.event-calendar{
+   .fc-listMonth-view{
+    .event-description{
+        display: block;
+    }
+   }
+}
+.fc-direction-ltr{
+    height: 95.5%;
+}
